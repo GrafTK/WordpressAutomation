@@ -17,8 +17,8 @@ Scenario Outline: Searching by the author name
 
 Scenario Outline:  Searching by invalid input
 
-Given subscriber is logged into Cybertek's Blog! 
-  And profile page is loaded
+	Given subscriber is logged into Cybertek's Blog! 
+  	And profile page is loaded
 	When subscriber clicks on Cybertek's Blog! 
 	Then Cybertek's Blog home page should be displayed 
 	When subscriber searches by <"invalid input">
