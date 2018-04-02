@@ -6,7 +6,7 @@ Scenario: Verifying Account Menu Options
 	And profile page is loaded 
 	When subscriber hovers over account menu
 	Then the following menu options should be visible:
-	Then I pushed my branch
+	
 	|Icode          | 
 	|Edit My Profile|
 	|Log Out        |

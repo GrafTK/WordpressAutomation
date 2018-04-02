@@ -9,7 +9,7 @@ Scenario Outline: Posting a comment
 	Then Cybertek's Blog home page should be displayed 
 	When subscriber clicks on "postName"
 	Then subscriber should be able to post a <"comment">
-	
+	Then I created new step
 
 	Examples:
 	|comment                             |
