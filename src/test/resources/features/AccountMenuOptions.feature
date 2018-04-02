@@ -17,4 +17,5 @@ Scenario: Verifying Edit My Profile on Account Menu Options
 	When subscriber hovers over account menu
 	And subscriber clicks Edit My Profile
 	Then the corresponding web page should be loaded
+	And this is really cool!
 	
