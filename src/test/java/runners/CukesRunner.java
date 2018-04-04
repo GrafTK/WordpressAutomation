@@ -4,11 +4,11 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-		plugin="html:target/cucumber" ,
+		plugin= {"pretty" ,"html:target/cucumber" ,"json:target/json"} ,
 		features="src/test/resources/features" ,
 		glue="stepDefinitions" ,
-		tags="@dev" ,
-		dryRun=false
+		tags="@" ,
+		dryRun=true
 		
 		)
 public class CukesRunner extends AbstractTestNGCucumberTests {
