@@ -1,7 +1,6 @@
-@Commenting
 Feature: Commenting 
 
-
+@Commenting
 Scenario Outline: Posting a comment
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 
