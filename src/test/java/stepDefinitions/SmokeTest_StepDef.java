@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import page.WordpressHomePage;
@@ -9,6 +8,7 @@ import page.WordpressProfilePage;
 import utilities.Driver;
 
 public class SmokeTest_StepDef {
+	
 	WebDriver driver = Driver.getDriver();
 	WordpressHomePage homePage = new WordpressHomePage();
 	WordpressProfilePage profilePage = new WordpressProfilePage();
