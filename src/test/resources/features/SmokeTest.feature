@@ -1,3 +1,4 @@
+@SmokeTest
 Feature: Smoke Test
 
 Scenario: Smoke Test of Cybertek's Blog!
