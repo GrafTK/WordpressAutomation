@@ -1,6 +1,6 @@
 Feature: Smoke Test
 
-Scenario: Smoke Test
+Scenario: Smoke Test of Cybertek's Blog!
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 
 	When subscriber clicks on Cybertek's Blog! 
