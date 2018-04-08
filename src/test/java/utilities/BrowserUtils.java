@@ -9,13 +9,23 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
+
 public class BrowserUtils {
+
+	private static WebDriver driver = Driver.getDriver();
 	
+	public static void hover(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).perform();
+	}
+
 
 	public static List<String> getElementsText(By locator){
 		
