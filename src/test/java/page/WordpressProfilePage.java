@@ -20,4 +20,7 @@ private WebDriver driver;
 	@FindBy (linkText="Cybertek's Blog!")
 	public WebElement cyberTekBlog;
 	
+	@FindBy (xpath="//ul[@id='wp-admin-bar-root-default']//a[text()='Visit Site']")
+	public WebElement visitSiteLink;
+	
 }
