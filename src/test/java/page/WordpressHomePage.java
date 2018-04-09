@@ -35,7 +35,61 @@ public class WordpressHomePage {
 		login.sendKeys(userName);
 		password.sendKeys(pwd);
 		loginButton.click();
-	}}
+
+	}
+	
+	
+	
+	@FindBy(id = "user_pass")
+	public WebElement passwd;
+
+	
+	
+	
+	
+	@FindBy(xpath = "//label[@for='description']")
+	public WebElement bioInfo;
+	
+	@FindBy(id = "description")
+	public WebElement textarea;
+	
+	
+	
+	
+	@FindBy(xpath = "//tr[@class='user-profile-picture']")
+	public WebElement ProfPictureText;
+	
+	@FindBy(xpath = "//a[@href='https://en.gravatar.com/']")
+	public WebElement Gravatar;
+	
+	
+	
+	@FindBy(xpath = "//button[@type='button']")
+	public WebElement generPasswd;
+	
+	
+	@FindBy(xpath = "//th[.='Sessions']")
+	public WebElement sessionsText;
+	
+	
+	@FindBy(xpath = "//label[@for='pass1-text']")
+	public WebElement newPasswordText;
+	
+	@FindBy(xpath = "//img[@class='avatar avatar-96 photo']")
+	public WebElement gravatarPicture;
+	
+	
+	
+	//@FindBy(xpath = "//button[@id='destroy-sessions']")
+	@FindBy(xpath = "//button[contains(text(), 'Log Out Everywhere Else')]")
+	public WebElement logOuteEverywhereButton;
+	
+	@FindBy(xpath = "//div[.='You are now logged out everywhere else.']")
+	public WebElement YouAreNowLoggedText;
+
+}
+
+	
 //@FindBy(xpath="//li[@id='wp-admin-bar-site-name']/a")
 //public WebElement sybertekBlog;
 //
@@ -43,4 +97,6 @@ public class WordpressHomePage {
 //
 //
 //
-//}
+//
+}}
+
