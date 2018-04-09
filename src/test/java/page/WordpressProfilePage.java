@@ -23,4 +23,6 @@ private WebDriver driver;
 	@FindBy (xpath="//ul[@id='wp-admin-bar-root-default']//a[text()='Visit Site']")
 	public WebElement visitSiteLink;
 	
+	@FindBy(linkText="Dashboard")
+	public WebElement dashboard;
 }
