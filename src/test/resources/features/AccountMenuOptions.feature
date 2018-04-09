@@ -1,13 +1,12 @@
-@Menu
 Feature: Account Menu Options
-
+@Menu
 Scenario: Verifying Account Menu Options
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 
 	When subscriber hovers over account menu
 	Then the following menu options should be visible:
 	
-	|Icode          | 
+	|Graf TK          | 
 	|Edit My Profile|
 	|Log Out        |
 
