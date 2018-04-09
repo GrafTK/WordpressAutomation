@@ -1,11 +1,12 @@
+@notes
 Feature: Dashboard
 
-Background:
- Given subscriber is logged into Cyberteks's Blog!
- And profile page is loaded
+ 
  
  
  Scenario: subscriber should able to have About Yourself configures options
+ Given subscriber is logged into Cybertek's Blog! 
+ And profile page is loaded  
  Given Biographycal Info Checkbox
  When subscriber to able click on Biographycal Info Checkbox checkbox 
  Then subscriber able to type some information 
@@ -15,6 +16,8 @@ Background:
  
  
  Scenario: subscriber should able to have Account Management configures options
+ Given subscriber is logged into Cybertek's Blog! 
+ And profile page is loaded 
  Given New Password button 
  When subscriber clicks on Generate Password button
  Then subscriber able Change and Hide password
