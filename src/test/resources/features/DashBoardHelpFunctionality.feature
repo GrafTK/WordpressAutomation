@@ -1,7 +1,5 @@
-@DHelp
 Feature: Dashboard Help Functionality 
-
-
+@DHelp
 Scenario: Verifying Dashboard Help Functionality Options
 	Given subscriber is logged into Cybertek's Blog! 
 	When subscriber clicks on Dashboard  

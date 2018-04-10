@@ -8,7 +8,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 				"json:target/json"} ,
 		features="src/test/resources/features" ,
 		glue="stepDefinitions" ,
-		tags="@Menu" ,
+		tags="@DHelp" ,
 		dryRun=false
 		
 		)
