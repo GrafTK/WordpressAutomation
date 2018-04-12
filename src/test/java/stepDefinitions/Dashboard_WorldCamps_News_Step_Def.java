@@ -22,6 +22,7 @@ public class Dashboard_WorldCamps_News_Step_Def {
 	@Then("^subscriber should be able to see news$")
 	public void subscriber_should_be_able_to_see_news() {
 		subscriber_should_be_able_to_see_upcoming_WorldCamps();
+		
 	}
 
 }
