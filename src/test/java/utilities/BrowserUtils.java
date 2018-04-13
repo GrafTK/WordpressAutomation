@@ -25,6 +25,20 @@ public class BrowserUtils {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).perform();
 	}
+	
+	public static boolean verifyTitle(String expectedTitle) {
+
+		String actualTitle = driver.getTitle();
+		return actualTitle.equals(expectedTitle);
+
+	}
+
+	public static boolean verifyUrl(String expectedUrl) {
+
+		String actualUrl = driver.getCurrentUrl();
+		return actualUrl.contains(expectedUrl);
+
+	}
 
 
 	public static List<String> getElementsText(By locator){
@@ -104,6 +118,21 @@ public class BrowserUtils {
 			}
 		}
 		Driver.getDriver().switchTo().window(origin);
+	}
+
+
+	
+	public static List<String> getElementsText(List <WebElement> elements){
+		
+	
+		 List<String> elemTexts = new ArrayList<>();
+
+		 for(WebElement el : elements) {
+		 	if(!el.getText().isEmpty()) {
+		 		elemTexts.add(el.getText());
+		 	}
+		 }
+		 return elemTexts;
 	}
 
 }
