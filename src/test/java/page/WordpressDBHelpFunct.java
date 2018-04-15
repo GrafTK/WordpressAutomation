@@ -21,7 +21,7 @@ private WebDriver driver;
 	@FindBy(id="contextual-help-link")
 	public WebElement helpButton; 
 	
-	@FindBy(xpath="//div[@id='contextual-help-columns']//div//ul//li")
+	@FindBy(xpath="//div[@class='contextual-help-tabs']//a")
 	public  List <WebElement> helpFunctionalityOptions;
 	
 	@FindBy(linkText="Documentation on User Profiles")

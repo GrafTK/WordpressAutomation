@@ -89,14 +89,4 @@ public class WordpressHomePage {
 
 }
 
-	
-//@FindBy(xpath="//li[@id='wp-admin-bar-site-name']/a")
-//public WebElement sybertekBlog;
-//
-//
-//
-//
-//
-//
-}}
 
