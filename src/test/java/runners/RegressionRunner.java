@@ -7,7 +7,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		plugin= {"pretty" ,"html:target/cucumber" ,"json:target/json"} ,
 		features="src/test/resources/features" ,
 		glue="stepDefinitions" ,
-		tags="@regression" ,
+		tags="@account,@account2,@cybertekblog,@cybertekblog2,@meetups,@meetups2,@dashboardHelp,@dashboardHelp2,@smoketest,@dashboard,@dashboard2" ,
 		dryRun=false
 		
 		)
