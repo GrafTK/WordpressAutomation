@@ -41,7 +41,7 @@ public class Profile2StepDefs {
 	@Then("^Default choosen name should be displayed$")
 	public void default_choosen_name_should_be_displayed() {
 		BrowserUtils.waitFor(3);
-		assertTrue(profPage.defaultDropDownValue.getText().equals("Graf TK"));
+		assertTrue(profPage.defaultDropDownValue.getText().equals("Graf"));
 	}
 
 	@Then("^subscriber should be able to click on  display name Publicly as to change name$")

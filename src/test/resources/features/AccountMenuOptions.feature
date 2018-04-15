@@ -5,7 +5,7 @@ Scenario: Verifying Account Menu Options
 	And profile page is loaded 
 	When subscriber hovers over account menu
 	Then the following menu options should be visible:
-	|Graf TK         | 
+	|Graf        | 
 	|Edit My Profile|
 	|Log Out        |
 	And subscriber logs out
