@@ -87,16 +87,9 @@ public class WordpressHomePage {
 	@FindBy(xpath = "//div[.='You are now logged out everywhere else.']")
 	public WebElement YouAreNowLoggedText;
 
-}
+
 
 	
-//@FindBy(xpath="//li[@id='wp-admin-bar-site-name']/a")
-//public WebElement sybertekBlog;
-//
-//
-//
-//
-//
-//
-}}
+
+}
 

@@ -24,12 +24,7 @@ private WebDriver driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	private WebDriver driver;
 
-	public WordpressDashboardPage() {
-		this.driver = Driver.getDriver();
-		PageFactory.initElements(driver, this);
-	}
 @FindBy(xpath="(//span[@class='display-name'])[1]")
 public WebElement Howdy;
 
@@ -43,23 +38,31 @@ public void clickHowdy() {
 @FindBy(linkText="Log Out")
 public WebElement logout;
 
+@FindBy(xpath="//h3[.='Recently Published']")
+public WebElement recentPublishes;
 
-	@FindBy(xpath="(//*[text()='Dashboard'])")
-	public WebElement dashboard;
-	
-	@FindBy(xpath="(//*[text()='WordPress Gutenberg Demo and Talk'])")
-	public WebElement city;
-	
-	@FindBy (xpath="//section[@class='section text--small']")
-	public WebElement eventInfo;
-	
-	@FindBy (xpath="(//h4[.='Meetup'])")
-	public WebElement meetup;
-	
-	@FindBy (xpath="(//span[.='Groups'])")
-	public WebElement groups;
-	
-	@FindBy (css=".community-events-footer a")
-	public List<WebElement> worldCamps;
+@FindBy(linkText="slay")
+public WebElement postSlay;
+
+@FindBy(xpath="(//span[@class='ab-icon'])[2]")
+public WebElement wordpressLogo;
+
+@FindBy(linkText="WordPress.org")
+public WebElement wordpresslink;
+
+@FindBy(linkText="Documentation")
+public WebElement documentation;
+
+@FindBy(linkText="About WordPress")
+public WebElement aboutWordpress;
+public void logoOptions(WebElement element) {
+	Actions action=new Actions(driver);
+	action.moveToElement(wordpressLogo).build().perform();
+element.click();
 }
 
+
+
+
+
+}
