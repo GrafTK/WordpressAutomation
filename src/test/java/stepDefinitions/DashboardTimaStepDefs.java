@@ -29,14 +29,15 @@ CybertekBlogsPage cybertek=new CybertekBlogsPage();
 	  profilePage.dashboard.click();
 	}
 
-	@Then("^subscriber should be able to read the documentation$")
-	public void subscriber_should_be_able_to_read_the_documentation() {
+	@Then("^subscriber should be able to see the documentation$")
+	public void subscriber_should_be_able_to_see_the_documentation() {
 	BrowserUtils.waitFor(3);
 	 dashboard.logoOptions(dashboard.documentation);
 	 assertTrue(driver.getCurrentUrl().equals(ConfigurationReader.getProperty("documentationUrl")));
 	}
 	@Then("^subscriber goes back to dashboard page$")
 	public void subscriber_goes_back_to_dashboard_page() {
+		BrowserUtils.waitFor(3);
 	   driver.navigate().back();
 	   String expected="Dashboard ‹ Cybertek's Blog! — WordPress";
 	   assertTrue(driver.getTitle().equals(expected),"title is wrong");
@@ -46,5 +47,10 @@ CybertekBlogsPage cybertek=new CybertekBlogsPage();
 	@Then("^subscriber should be able to go to wordpress official page$")
 	public void subscriber_should_be_able_to_go_to_wordpress_official_page() {
 	    dashboard.logoOptions(dashboard.wordpresslink);
+	}
+	@Then("^subscriber should be able to go back to dashboard page$")
+	public void subscriber_should_be_able_to_go_back_to_dashboard_page() {
+	    driver.navigate().back();
+	    assertTrue(driver.getTitle().equals(ConfigurationReader.getProperty("dashboardtitle")));
 	}
 }

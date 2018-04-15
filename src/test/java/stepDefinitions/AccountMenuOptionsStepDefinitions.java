@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +15,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import page.WordpressAccountMenuPage;
+import page.WordpressProfilePage;
 import utilities.BrowserUtils;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -54,7 +57,7 @@ public class AccountMenuOptionsStepDefinitions {
 
 	@Then("^the corresponding web page should be loaded$")
 	public void the_corresponding_web_page_should_be_loaded() {
-		  Assert.assertTrue(BrowserUtils.verifyTitle(ConfigurationReader.getProperty("profilePageTitle")), 
-				  "Title verification failed");
+		BrowserUtils.waitFor(3);
+		assertTrue(driver.getTitle().equals(ConfigurationReader.getProperty("profilePageTitle")));
 	}
 }

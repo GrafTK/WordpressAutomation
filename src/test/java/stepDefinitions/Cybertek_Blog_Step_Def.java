@@ -25,7 +25,9 @@ public class Cybertek_Blog_Step_Def {
 	@Given("^subscriber is logged into Cybertek's Blog!$")
 	public void subscriber_is_logged_into_Cybertek_s_Blog() {
 		driver.get(ConfigurationReader.getProperty("url"));
+		BrowserUtils.waitFor(3);
 		homePage.login.sendKeys(ConfigurationReader.getProperty("username"));
+		homePage.passwd.clear();
 		homePage.password.sendKeys(ConfigurationReader.getProperty("password"));
 		homePage.loginButton.click();
 		
@@ -34,24 +36,27 @@ public class Cybertek_Blog_Step_Def {
 
 	@Given("^profile page is loaded$")
 	public void profile_page_is_loaded() {
-assertTrue(driver.getTitle().equals(ConfigurationReader.getProperty("profileTitle")),"profile title is wrong");
+		BrowserUtils.waitFor(1);
+assertTrue(driver.getTitle().equals(ConfigurationReader.getProperty("profilePageTitle")),"profile title is wrong");
 	}
 
 	@When("^subscriber clicks on Cybertek's Blog!$")
 	public void subscriber_clicks_on_Cybertek_s_Blog() {
+		BrowserUtils.waitFor(1);
 		profilePage.cyberTekBlog.click();
 
 	}
 
 	@Then("^Cybertek's Blog home page should be displayed$")
 	public void cybertek_s_Blog_home_page_should_be_displayed() {
-		
+		BrowserUtils.waitFor(3);
 		assertTrue(driver.getTitle().equals(ConfigurationReader.getProperty("cybertekBlogTitle")),
 				"cybertek blog title is wrong");
 	}
 
 	@When("^subscriber hovers over Cybertek's Blog!$")
 	public void subscriber_hovers_over_Cybertek_s_Blog() {
+		BrowserUtils.waitFor(1);
 		Actions action=new Actions(driver);
 		action.moveToElement(profilePage.cyberTekBlog).perform();
 		BrowserUtils.waitFor(2);

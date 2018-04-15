@@ -1,5 +1,5 @@
 Feature: WordlsCamps and News 
-
+@worldcamps
 Scenario: Subscriber should be able see WorldCamps 
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 
@@ -8,7 +8,7 @@ Scenario: Subscriber should be able see WorldCamps
 	Then subscriber should be able to see upcoming WorldCamps 
 	
 	
-@DashWNF
+@worldcamps2
 Scenario: Subscriber should be able to read news 
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 

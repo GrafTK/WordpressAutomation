@@ -29,8 +29,7 @@ private WebDriver driver;
 public WebElement Howdy;
 
 
-	@FindBy(xpath = "(//span[@class='display-name'])[1]")
-	public WebElement Howdy;
+
 
 	public void clickHowdy() {
 		Actions act = new Actions(driver);
@@ -61,11 +60,9 @@ public WebElement Howdy;
 	@FindBy(xpath="//p[@class='community-events-footer']//a[2]")
 	public WebElement wordCamps;
 
-@FindBy(xpath="//h3[.='Recently Published']")
-public WebElement recentPublishes;
 
-@FindBy(linkText="slay")
-public WebElement postSlay;
+
+
 
 @FindBy(xpath="(//span[@class='ab-icon'])[2]")
 public WebElement wordpressLogo;
@@ -83,18 +80,14 @@ public void logoOptions(WebElement element) {
 	action.moveToElement(wordpressLogo).build().perform();
 element.click();
 }
-@FindBy(xpath="(//*[text()='Dashboard'])")
-public WebElement dashboard;
-
-@FindBy(xpath="(//*[text()='WordPress Gutenberg Demo and Talk'])")
-public WebElement city;
-
-@FindBy (xpath="//section[@class='section text--small']")
-public WebElement eventInfo;
 
 
-@FindBy (xpath="(//span[.='Groups'])")
-public WebElement groups;
+
+
+
+
+
+
 
 @FindBy (css=".community-events-footer a")
 public List<WebElement> worldCamps;

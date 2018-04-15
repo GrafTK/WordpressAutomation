@@ -12,6 +12,8 @@ import page.CybertekBlogsPage;
 import page.WordpressDashboardPage;
 import page.WordpressHomePage;
 import page.WordpressProfilePage;
+import utilities.BrowserUtils;
+import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class SmokeTest_StepDef {
@@ -34,11 +36,12 @@ public class SmokeTest_StepDef {
 	@Then("^Dashboard page should be loaded$")
 	public void dashboard_page_should_be_loaded() {
 	 profilePage.dashboard.click();
-		assertTrue(driver.getTitle().equals("Dashboard ‹ Cybertek's Blog! — WordPress"));
+		assertTrue(driver.getTitle().equals(ConfigurationReader.getProperty("dashboardtitle")));
 	}
 
 	@Then("^subscriber logs out$")
 	public void subscriber_logs_out() {
+		BrowserUtils.waitFor(2);
 	    dashboard.clickHowdy();
 	    dashboard.logout.click();
 	}

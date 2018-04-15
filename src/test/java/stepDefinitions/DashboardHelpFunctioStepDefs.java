@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.Arrays;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +11,7 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import page.WordpressDBHelpFunct;
+import utilities.BrowserUtils;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
@@ -22,13 +25,14 @@ public class DashboardHelpFunctioStepDefs {
 
 	@When("^subscriber click on Help functionality$")
 	public void subscriber_click_on_Help_functionality() {
+		BrowserUtils.waitFor(3);
 	   dashboardFunctionality.helpButton.click();
 	   
 	}
 
 	@Then("^the following options should be displayed in Help:$")
 	public void the_following_options_should_be_displayed_in_Help(List <String> helpOptions) {
-		
+		BrowserUtils.waitFor(3);
 	  String[]expectedArr =ConfigurationReader.getProperty("helpOptions").split(",");
 	  List<String>expectedList= Arrays.asList(expectedArr);
 	  Assert.assertEquals(expectedList, helpOptions, "Help options are not matching");
@@ -46,8 +50,9 @@ public class DashboardHelpFunctioStepDefs {
 
 	@Then("^following links should be displayed under Help's For More Information:$")
 	public void following_links_should_be_displayed_under_Help_s_For_More_Information(List <String> helpOptions) {
-	    
-	  
+	   BrowserUtils.waitFor(3);
+		assertTrue(dashboardFunctionality.helpDoc.isDisplayed(),"help doc is not displayed");
+	  assertTrue(dashboardFunctionality.supportForumsLink.isDisplayed(),"support forum link is not displayed");
 	}
 	
 	
