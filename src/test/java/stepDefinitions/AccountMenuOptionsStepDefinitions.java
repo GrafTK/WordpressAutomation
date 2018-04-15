@@ -44,7 +44,7 @@ public class AccountMenuOptionsStepDefinitions {
 		String [] expected=ConfigurationReader.getProperty("hoverOverOptions").split(",");
 		
 		
-		Assert.assertEquals(menuOptions, menuTextsActual, "Menu is not matching");	
+		Assert.assertEquals(menuTextsActual,menuOptions,  "Menu is not matching");	
 	}
 
 	@When("^subscriber clicks Edit My Profile$")

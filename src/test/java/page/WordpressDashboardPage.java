@@ -29,14 +29,37 @@ private WebDriver driver;
 public WebElement Howdy;
 
 
-public void clickHowdy() {
-	Actions act=new Actions(driver);
-	act.moveToElement(Howdy).build().perform();
-	
-}
+	@FindBy(xpath = "(//span[@class='display-name'])[1]")
+	public WebElement Howdy;
 
-@FindBy(linkText="Log Out")
-public WebElement logout;
+	public void clickHowdy() {
+		Actions act = new Actions(driver);
+		act.moveToElement(Howdy).build().perform();
+
+	}
+
+
+	@FindBy(linkText = "Log Out")
+	public WebElement logout;
+
+	@FindBy(xpath = "(//*[text()='Dashboard'])")
+	public WebElement dashboard;
+
+	@FindBy(xpath = "(//*[text()='WordPress Gutenberg Demo and Talk'])")
+	public WebElement city;
+
+	@FindBy(xpath = "//section[@class='section text--small']")
+	public WebElement eventInfo;
+
+	@FindBy(xpath="//p[@class='community-events-footer']//a[1]")
+	public WebElement meetup;
+
+	@FindBy(xpath = "(//span[.='Groups'])")
+	public WebElement groups;
+
+	
+	@FindBy(xpath="//p[@class='community-events-footer']//a[2]")
+	public WebElement wordCamps;
 
 @FindBy(xpath="//h3[.='Recently Published']")
 public WebElement recentPublishes;
@@ -69,8 +92,6 @@ public WebElement city;
 @FindBy (xpath="//section[@class='section text--small']")
 public WebElement eventInfo;
 
-@FindBy (xpath="(//h4[.='Meetup'])")
-public WebElement meetup;
 
 @FindBy (xpath="(//span[.='Groups'])")
 public WebElement groups;
@@ -82,3 +103,4 @@ public List<WebElement> worldCamps;
 
 
 }
+

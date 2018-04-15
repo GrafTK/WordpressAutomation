@@ -1,5 +1,5 @@
+@CybertekBlog
 Feature: Cybertek's Blog! functionality 
-
 
 Scenario: Click on Cybertek's Blog!    
 	Given subscriber is logged into Cybertek's Blog! 
@@ -7,7 +7,6 @@ Scenario: Click on Cybertek's Blog!
 	When subscriber clicks on Cybertek's Blog! 
 	Then Cybertek's Blog home page should be displayed 
 	
-@CybertekBlog
 Scenario: Verifying Cybertek's Blog! menu option
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 

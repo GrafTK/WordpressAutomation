@@ -1,4 +1,3 @@
-@DashENF
 Feature: Choose city and see meetups and groups 
 
 Scenario: Search for events and news in different cities 
@@ -10,10 +9,11 @@ Scenario: Search for events and news in different cities
 	And receive events and news in that city 
 	
 	
+@DashENF
 Scenario: Subscriber should be able to see meetups 
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 
 	When subscriber clicks on Dashboard 
 	Then Dashboard page should be loaded 
-	Then subscriber should be able to see Meetups and Groups 
+	Then subscriber should be able to see Meetups and WordCamps 
 	

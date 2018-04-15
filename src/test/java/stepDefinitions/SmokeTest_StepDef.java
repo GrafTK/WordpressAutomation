@@ -34,7 +34,7 @@ public class SmokeTest_StepDef {
 	@Then("^Dashboard page should be loaded$")
 	public void dashboard_page_should_be_loaded() {
 	 profilePage.dashboard.click();
-		assertTrue(driver.getTitle().equals("Dashboard ‹ Cybertek's Blog! — WordPress"));
+		assertTrue(driver.getTitle().equals("Dashboard â€¹ Cybertek's Blog! â€” WordPress"));
 	}
 
 	@Then("^subscriber logs out$")

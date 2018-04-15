@@ -36,12 +36,11 @@ public class Dashboard_Events_And_News_Step_Def {
 
 	}
 
-	@Then("^subscriber should be able to see Meetups and Groups$")
-	public void subscriber_should_be_able_to_see_Meetups_and_Groups() {
-		SoftAssert soft = new SoftAssert();
-		soft.assertTrue(dashboardpage.meetup.isDisplayed(), "Meetup failed");
-		soft.assertTrue(dashboardpage.groups.isDisplayed(), "Groups failed");
-		soft.assertAll();
+	@Then("^subscriber should be able to see Meetups and WordCamps$")
+	public void subscriber_should_be_able_to_see_Meetups_and_WordCamps() {
+		Assert.assertTrue(dashboardpage.meetup.isDisplayed(), "Meetups is not displayed");
+		Assert.assertTrue(dashboardpage.wordCamps.isDisplayed(), "WordCamps is not displayed");
+		
 	}
 
 }

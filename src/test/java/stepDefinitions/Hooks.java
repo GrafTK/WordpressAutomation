@@ -16,10 +16,11 @@ import utilities.Driver;
 public class Hooks {
 	@Before
 	public void setup(Scenario scenario ) {
+		
 		WebDriver driver=Driver.getDriver();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		System.out.println("Before scenario");
+		driver.manage().window().fullscreen();
+		
 	}
 	@After
 	public void tearDown(Scenario scenario) {

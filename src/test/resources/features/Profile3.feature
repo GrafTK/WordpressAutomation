@@ -1,4 +1,3 @@
-@notes
 Feature: Dashboard
 
  
@@ -15,6 +14,7 @@ Feature: Dashboard
  Then subscriber able to see and change own profile picture
  
  
+@notes
  Scenario: subscriber should able to have Account Management configures options
  Given subscriber is logged into Cybertek's Blog! 
  And profile page is loaded 
