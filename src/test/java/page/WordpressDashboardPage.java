@@ -60,7 +60,23 @@ public void logoOptions(WebElement element) {
 	action.moveToElement(wordpressLogo).build().perform();
 element.click();
 }
+@FindBy(xpath="(//*[text()='Dashboard'])")
+public WebElement dashboard;
 
+@FindBy(xpath="(//*[text()='WordPress Gutenberg Demo and Talk'])")
+public WebElement city;
+
+@FindBy (xpath="//section[@class='section text--small']")
+public WebElement eventInfo;
+
+@FindBy (xpath="(//h4[.='Meetup'])")
+public WebElement meetup;
+
+@FindBy (xpath="(//span[.='Groups'])")
+public WebElement groups;
+
+@FindBy (css=".community-events-footer a")
+public List<WebElement> worldCamps;
 
 
 
