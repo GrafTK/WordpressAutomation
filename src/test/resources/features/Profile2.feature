@@ -1,22 +1,25 @@
 Feature: Dashboard
 
+
 Background:
- Given subscriber is logged into Cyberteks's Blog!
+ Given subscriber is logged into Cybertek's Blog!  
+
  And profile page is loaded
  
-
+@Prof3
  Scenario: subscriber should able to have Name configures options
- Given First Name, Last Name, Nickname checkboxes
- When subscriber able to click in firstName,lastName and nickName
- Then subscriber able to type valid firstName,lastName and nickName
- And Display name publicly as checkboxes
- When subscriber able to click on option dropDown to change display name publicy
- Then subscriber able to have options in dropDown 
+ Given First Name, Last Name, Nickname input fields
+ Then subscriber should able to see First Name,Last Name and Nick Name info
+ And Default choosen name should be displayed
+ Then subscriber should be able to click on  display name Publicly as to change name 
+ Then subscriber logs out
  
+ @Prof4
  Scenario: subscriber should able to have Contact Info configures options
- Given Email(required) checkbox
- When subscriber click on email(required) checkbox
- Then subscriber able to type an email should display
- Given Website checkbox
- When subscriber click on Website checkbox
- Then subscriber able to type an Website address should display
+ When subscriber click on email required input field
+ Then subscriber should be able to change an email address
+ When subscriber click on Website input field
+ Then subscriber should be able to insert a Website address 
+ When subscriber should click on Update Profile 
+ Then updated profile page should be displayed
+ 	Then subscriber logs out
