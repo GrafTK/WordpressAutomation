@@ -87,6 +87,10 @@ public class WordpressHomePage {
 	@FindBy(xpath = "//div[.='You are now logged out everywhere else.']")
 	public WebElement YouAreNowLoggedText;
 
+
+
+
+
 }
 
 
