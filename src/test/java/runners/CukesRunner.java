@@ -10,7 +10,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features="src/test/resources/features" ,
 		glue="stepDefinitions" ,
 
-		tags="@account" ,
+		tags="@PHelp" ,
 
 		dryRun=false
 		

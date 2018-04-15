@@ -88,6 +88,7 @@ public class WordpressHomePage {
 	public WebElement YouAreNowLoggedText;
 
 
+	
 
 
 

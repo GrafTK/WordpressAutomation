@@ -16,8 +16,7 @@ Scenario Outline:  Verifying Help Link Web Page
 	Given subscriber is logged into Cybertek's Blog! 
   	And profile page is loaded
 	When subscriber clicks on Help Functionality
-	And clicks on <"link name"> 
-	Then "<link name>" web page should be displayed
+	And clicks on "<linkName>" and web page should be displayed
 	
 
 	Examples:

@@ -44,4 +44,24 @@ private WebDriver driver;
 		act.moveToElement(howdy).build().perform();
 	}
 	
+	
+	
+	@FindBy(xpath = "//button[@id='contextual-help-link']")
+	public WebElement helpButton;
+	
+	
+	@FindBy(linkText="Log Out")
+	public WebElement logoutBtn;
+	
+	
+	@FindBy(css="a[href='https://codex.wordpress.org/Users_Your_Profile_Screen']")
+	public WebElement d2;
+	
+	@FindBy(linkText="Support Forums")
+	public WebElement supportFormsLink;
+	
+	@FindBy(linkText="Documentation on User Profiles")
+	public WebElement documentationOnUserProfile;
+	
+	
 }
