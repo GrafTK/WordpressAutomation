@@ -3,7 +3,7 @@
 
 	<test name="Automated tests">
 		<classes>
-			<class name ="/WordpressAutomation/src/test/java/runners/RegressionRunner.java"></class>
+			<class name ="runners.RegressionRunner"></class>
 		</classes>
 	</test>
 

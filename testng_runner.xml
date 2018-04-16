@@ -3,7 +3,7 @@
 
 	<test name="Automated tests">
 		<classes>
-			<class name ="/WordpressAutomation/src/test/java/runners/CukesRunner.java"></class>
+			<class name ="runners.CukesRunner"></class>
 		</classes>
 	</test>
 
