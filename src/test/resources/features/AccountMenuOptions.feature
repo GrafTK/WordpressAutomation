@@ -1,5 +1,6 @@
-Feature: Account Menu Options
 @account
+Feature: Account Menu Options
+
 Scenario: Verifying Account Menu Options
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 
@@ -11,7 +12,7 @@ Scenario: Verifying Account Menu Options
 	And subscriber logs out
 	
 
-	@account2
+	
 Scenario: Verifying Edit My Profile on Account Menu Options
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 

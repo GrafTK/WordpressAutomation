@@ -1,5 +1,6 @@
-Feature: Dashboard 
 @dashboard
+Feature: Dashboard 
+
 Scenario: Subscriber should be able click on Dashboard 
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 
@@ -9,7 +10,7 @@ Scenario: Subscriber should be able click on Dashboard
 	And subscriber should be able to go back to dashboard page
 	And subscriber logs out
 	
-@dahsboard2
+
 Scenario: Subscriber should be able to comment on recently published activities 
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 

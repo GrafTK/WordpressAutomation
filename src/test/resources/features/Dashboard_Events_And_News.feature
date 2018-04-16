@@ -1,5 +1,6 @@
+@meetups
 Feature: Choose city and see meetups and groups 
-@meetups 
+ 
 Scenario: Search for events and news in different cities 
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 
@@ -10,7 +11,7 @@ Scenario: Search for events and news in different cities
 	Then subscriber should be able to go back to the dashbaord page 
 	Then subscriber logs out 
 	
-@meetups2 
+ 
 Scenario: Subscriber should be able to see meetups 
 	Given subscriber is logged into Cybertek's Blog! 
 	And profile page is loaded 
