@@ -20,7 +20,7 @@ public class ProfileHelpFunctionality {
 	WebDriver driver= Driver.getDriver();
 	WordpressHomePage homePage= new WordpressHomePage();	
 	WordpressProfilePage profilePage= new WordpressProfilePage();
-	
+	List <WebElement> elements;
 	@When("^subscriber clicks on Help Functionality$")
 	public void subscriber_clicks_on_Help_Functionality() {
 	    // Write code here that turns the phrase above into concrete actions
@@ -32,7 +32,7 @@ public class ProfileHelpFunctionality {
 	@Then("^following links should be displayed under For More Information:$")
 	public void following_links_should_be_displayed_under_For_More_Information(List <String> helpLinks) {
 	   
-	    List <WebElement> elements = new ArrayList<>();
+	   elements = new ArrayList<>();
 	    
 	      elements.add(profilePage.documentationOnUserProfile);
 	      elements.add(profilePage.supportFormsLink);
@@ -48,18 +48,21 @@ public class ProfileHelpFunctionality {
 	}
 
 
-	@When("^clicks on \"([^\"]*)\" and web page should be displayed$")
-	public void clicks_on_and_web_page_should_be_displayed(String linkText) {
-		System.out.println(linkText);
-		   WebElement link = driver.findElement(By.linkText(linkText));
-			link.click();
-			if(linkText.equals("Documentation on User Profiles")) {
-				Assert.assertEquals(driver.getCurrentUrl(), ConfigurationReader.getProperty("documentationURL"));
+
+		@When("^clicks on (.*) and web page should be displayed$")
+		public void clicks_on_and_web_page_should_be_displayed(String linkText) {
+		    
+
+		    elements = new ArrayList<>();
+		    
+		      elements.add(profilePage.documentationOnUserProfile);
+		      elements.add(profilePage.supportFormsLink);
+			for (WebElement each: elements) {
+				if (each.getText().equals(linkText)) {
+					each.click();
+				}
+
 			}
-			else {
-				Assert.assertEquals(driver.getCurrentUrl(), ConfigurationReader.getProperty("supportURL"));
-			}
-		
 	}
 
 
